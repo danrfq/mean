@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Rata-Rata</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kalkulator Nilai Rata-Rata</h1>
+
+    <script>
+        function getURLParameters() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return {
+                mean1: urlParams.get('mean1') || 0,
+                mean2: urlParams.get('mean2') || 0,
+                mean3: urlParams.get('mean3') || 0,
+                mean4: urlParams.get('mean4') || 0,
+                mean5: urlParams.get('mean5') || 0,
+                mean_akhir: urlParams.get('mean_akhir') || 0,
+            };
+        }
+
+        function displayResults() {
+            const parameters = getURLParameters();
+            //document.write('<body>');
+            document.write(`<p>Semester 1: ${parameters.mean1}</p>`);
+            document.write(`<p>Semester 2: ${parameters.mean2}</p>`);
+            document.write(`<p>Semester 3: ${parameters.mean3}</p>`);
+            document.write(`<p>Semester 4: ${parameters.mean4}</p>`);
+            document.write(`<p>Semester 5: ${parameters.mean5}</p>`);
+            document.write(`<p>Rata-Rata Akhir: ${parameters.mean_akhir}</p>`);
+            //document.write('</body>');
+        }
+        window.onload = displayResults;
+    </script>
+
+</body>
+
+</html>
