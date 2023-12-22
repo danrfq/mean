@@ -4,21 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Nilai Rata-Rata</title>
-    <style>
-        body {
-            background-color: cadetblue;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
@@ -38,6 +23,8 @@
 
         function displayResults() {
             const parameters = getURLParameters();
+            document.write('<title>Kalkulator Nilai Rata-Rata</title>');
+            document.write('<link rel="stylesheet" href="result.css">')
             document.write('<body>');
             document.write('<h1>Kalkulator Nilai Rata-Rata</h1>');
             document.write(`<p>Semester 1: ${parameters.mean1}</p>`);
