@@ -22,9 +22,6 @@
 </head>
 
 <body>
-
-    <h1>Kalkulator Nilai Rata-Rata</h1>
-
     <script>
         function getURLParameters() {
             const queryString = window.location.search;
@@ -41,18 +38,18 @@
 
         function displayResults() {
             const parameters = getURLParameters();
-            //document.write('<body>');
+            document.write('<body>');
+            document.write('<h1>Kalkulator Nilai Rata-Rata</h1>');
             document.write(`<p>Semester 1: ${parameters.mean1}</p>`);
             document.write(`<p>Semester 2: ${parameters.mean2}</p>`);
             document.write(`<p>Semester 3: ${parameters.mean3}</p>`);
             document.write(`<p>Semester 4: ${parameters.mean4}</p>`);
             document.write(`<p>Semester 5: ${parameters.mean5}</p>`);
             document.write(`<p>Rata-Rata Akhir: ${parameters.mean_akhir}</p>`);
-            //document.write('</body>');
+            document.write('</body>');
         }
         window.onload = displayResults;
     </script>
-
 </body>
 
 </html>
