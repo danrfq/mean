@@ -71,12 +71,21 @@
     <p id="result"></p>
 
     <script>
+        function validateInputs(grades) {
+            return grades.length > 0;
+        }
+
         function calculateAndRedirect() {
             const smt1 = parseGrades(document.getElementById('semester1').value);
             const smt2 = parseGrades(document.getElementById('semester2').value);
             const smt3 = parseGrades(document.getElementById('semester3').value);
             const smt4 = parseGrades(document.getElementById('semester4').value);
             const smt5 = parseGrades(document.getElementById('semester5').value);
+
+            if (!validateInputs(smt1) || !validateInputs(smt2) || !validateInputs(smt3) || !validateInputs(smt4) || !validateInputs(smt5)) {
+                alert('Harap input semua nilai semester anda.');
+                return;
+            }
 
             const mean1 = calculateMeanForSemester(smt1);
             const mean2 = calculateMeanForSemester(smt2);
